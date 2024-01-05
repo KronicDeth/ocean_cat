@@ -2,7 +2,7 @@ defmodule OceanCat.Broadcaster do
   use GenServer
 
   def start_link([]) do
-    GenServer.start_link(__MODULE__, [], [name: __MODULE__])
+    GenServer.start_link(__MODULE__, [], name: __MODULE__)
   end
 
   def add_server(server \\ __MODULE__, server_pid) do
